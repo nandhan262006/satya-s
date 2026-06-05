@@ -677,15 +677,27 @@ const Footer = () => (
   </footer>
 );
 
-// WhatsApp Floating Button
-const WhatsAppBtn = () => (
-  <motion.a href="https://wa.me/919494646975" target="_blank" rel="noopener noreferrer"
-    initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 2, type: "spring" }}
-    whileHover={{ scale: 1.1 }}
-    style={{ position: "fixed", bottom: 32, right: 32, width: 56, height: 56, background: "#25D366", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 25px rgba(37,211,102,0.5)", zIndex: 999, textDecoration: "none" }}>
-    <MessageCircle size={26} color="#fff" fill="#fff" />
-  </motion.a>
-);
+// Floating Action Buttons
+const FloatingBtns = () => {
+  const btns = [
+    { href: "tel:+919494646975", bg: "#6d1848", icon: Phone, label: "Call", delay: 1.2 },
+    { href: "https://www.instagram.com/satyasbeauty_makeup_artist", bg: "#E4405F", icon: Instagram, label: "Instagram", delay: 1.6 },
+    { href: "https://wa.me/919494646975", bg: "#25D366", icon: MessageCircle, label: "WhatsApp", delay: 2.0 },
+  ];
+  return (
+    <div style={{ position: "fixed", bottom: 32, right: 32, display: "flex", flexDirection: "column", gap: 12, zIndex: 999 }}>
+      {btns.map(({ href, bg, icon: Icon, label, delay }) => (
+        <motion.a key={label} href={href} target="_blank" rel="noopener noreferrer"
+          initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay, type: "spring" }}
+          whileHover={{ scale: 1.1 }}
+          aria-label={label}
+          style={{ width: 56, height: 56, background: bg, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 8px 25px ${bg}80`, textDecoration: "none" }}>
+          <Icon size={26} color="#fff" />
+        </motion.a>
+      ))}
+    </div>
+  );
+};
 
 // Main App
 export default function App() {
@@ -799,7 +811,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppBtn />
+      <FloatingBtns />
     </>
   );
 }
