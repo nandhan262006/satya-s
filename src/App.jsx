@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { Sparkles, Leaf, Star, ChevronDown, Phone, MapPin, Clock, Instagram, Facebook, MessageCircle, Menu, X, ArrowRight, Heart, Zap, Shield, Award } from "lucide-react";
+import { Leaf, Star, ChevronDown, Phone, MapPin, Clock, Instagram, Facebook, MessageCircle, Menu, X, ArrowRight, Heart, Zap, Shield, Award } from "lucide-react";
 
 const COLORS = {
   bgMain: "#f4e7f4",
@@ -152,17 +152,21 @@ const Hero = () => {
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(59,34,49,0.45), rgba(109,24,72,0.25))" }} />
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "6rem 2rem 4rem", width: "100%", position: "relative", zIndex: 1 }}>
         <motion.div initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, ease: "easeOut" }} style={{ maxWidth: 600 }}>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(183,122,165,0.2)", border: "1px solid rgba(183,122,165,0.4)", borderRadius: 999, padding: "6px 16px", marginBottom: "1.5rem" }}>
-            <Sparkles size={14} color="#fff" />
-            <span style={{ fontFamily: "'Outfit'", fontSize: 12, color: "#fff", letterSpacing: 2, fontWeight: 600 }}>PREMIUM BEAUTY EXPERIENCE</span>
-          </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
-            style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.8rem, 5vw, 4.2rem)", fontWeight: 700, color: "#fff", lineHeight: 1.2, marginBottom: "0.5rem", letterSpacing: "0.5px" }}>
-            <span style={{ fontSize: "0.35em", fontWeight: 400, letterSpacing: 4, opacity: 0.7, display: "block", marginBottom: 4 }}>WELCOME TO</span>
-            <span style={{ background: "linear-gradient(135deg, #fff, #f5d8e8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Satya's</span><br />
-            <span style={{ fontSize: "0.65em", fontWeight: 400, letterSpacing: 6, color: "#f5d8e8" }}>BEAUTY &</span><br />
-            <span style={{ fontStyle: "italic", fontSize: "0.85em", color: "#e8c4d8", letterSpacing: 3 }}>Aesthetic</span>
+            style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.8rem, 5vw, 4.2rem)", fontWeight: 700, color: "#fff", lineHeight: 1.15, marginBottom: "0.5rem" }}>
+            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}
+              style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.22em", fontWeight: 300, letterSpacing: 6, color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>
+              <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3))" }} />
+              WELCOME TO
+              <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(255,255,255,0.3), transparent)" }} />
+            </motion.span>
+            <span style={{ background: "linear-gradient(135deg, #fff, #f5d8e8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontSize: "1em", display: "block", lineHeight: 1.1 }}>Satya's</span>
+            <span style={{ fontSize: "0.65em", fontWeight: 300, letterSpacing: 8, color: "rgba(245,216,232,0.9)", display: "block", marginTop: 4 }}>Beauty &</span>
+            <span style={{ fontStyle: "italic", fontSize: "0.8em", fontWeight: 400, color: "#e8c4d8", letterSpacing: 4, display: "block" }}>Aesthetic</span>
+            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
+              style={{ display: "block", fontSize: "0.18em", fontWeight: 300, letterSpacing: 4, color: "rgba(255,255,255,0.35)", marginTop: 16 }}>
+              ✦  PREMIUM BEAUTY EXPERIENCE  ✦
+            </motion.span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }}
             style={{ fontFamily: "'Outfit'", fontSize: 16, color: "#fff", opacity: 0.85, lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: 440 }}>
