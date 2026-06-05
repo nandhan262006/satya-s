@@ -257,6 +257,16 @@ const serviceCategories = [
     title: "Aesthetic",
     photo: "/images/aesthetic.webp",
     items: ["Hydro Facials", "Chemical Peels", "Laser Hair Removal", "Permanent Eyebrows", "Permanent Lipstick", "Permanent Makeup", "Permanent Lashes"]
+  },
+  {
+    title: "Acupuncture",
+    photo: "",
+    items: ["Acupuncture Therapy", "Pain Management", "Stress Relief", "Holistic Healing", "Energy Balancing"]
+  },
+  {
+    title: "Acupressure",
+    photo: "",
+    items: ["Acupressure Therapy", "Pressure Point Massage", "Pain Relief", "Muscle Tension Release", "Wellness Treatment"]
   }
 ];
 
