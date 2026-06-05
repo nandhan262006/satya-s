@@ -259,14 +259,9 @@ const serviceCategories = [
     items: ["Hydro Facials", "Chemical Peels", "Laser Hair Removal", "Permanent Eyebrows", "Permanent Lipstick", "Permanent Makeup", "Permanent Lashes"]
   },
   {
-    title: "Acupuncture",
-    photo: "",
-    items: ["Acupuncture Therapy", "Pain Management", "Stress Relief", "Holistic Healing", "Energy Balancing"]
-  },
-  {
-    title: "Acupressure",
-    photo: "",
-    items: ["Acupressure Therapy", "Pressure Point Massage", "Pain Relief", "Muscle Tension Release", "Wellness Treatment"]
+    title: "Acupuncture & Acupressure",
+    photo: "/accupunchre.png",
+    items: ["Acupuncture Therapy", "Acupressure Therapy", "Pain Management", "Stress Relief", "Holistic Healing", "Energy Balancing", "Pressure Point Massage", "Muscle Tension Release", "Wellness Treatment"]
   }
 ];
 
