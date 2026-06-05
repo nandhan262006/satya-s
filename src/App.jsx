@@ -625,6 +625,13 @@ const Contact = () => (
           return link ? <a key={title} href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>{card}</a> : card;
         })}
       </div>
+      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} viewport={{ once: true }}
+        style={{ marginTop: "2.5rem", borderRadius: 24, overflow: "hidden", border: "1px solid rgba(255,255,255,0.3)", boxShadow: `0 16px 40px rgba(109,24,72,0.12)` }}>
+        <iframe
+          title="Satya's Beauty & Aesthetic Salon location"
+          src="https://maps.google.com/maps?q=4th+Cross+Rd+Housing+Board+Colony+Nellore+Andhra+Pradesh+524004&output=embed"
+          width="100%" height="400" style={{ border: 0, display: "block" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+      </motion.div>
     </div>
   </section>
 );
