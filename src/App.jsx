@@ -161,8 +161,8 @@ const Hero = () => {
               <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(255,255,255,0.3), transparent)" }} />
             </motion.span>
             <span style={{ background: "linear-gradient(135deg, #fff, #f5d8e8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontSize: "1em", display: "block", lineHeight: 1.1 }}>Satya's</span>
-            <span style={{ fontSize: "0.65em", fontWeight: 300, letterSpacing: 8, color: "rgba(245,216,232,0.9)", display: "block", marginTop: 4 }}>Beauty &</span>
-            <span style={{ fontStyle: "italic", fontSize: "0.8em", fontWeight: 400, color: "#e8c4d8", letterSpacing: 4, display: "block" }}>Aesthetic</span>
+            <span style={{ fontSize: "0.55em", fontWeight: 300, letterSpacing: 10, color: "rgba(245,216,232,0.9)", display: "block", marginTop: 6 }}>Beauty & Aesthetic</span>
+            <span style={{ fontSize: "0.35em", fontWeight: 400, letterSpacing: 12, color: "rgba(232,196,216,0.6)", display: "block", marginTop: 2, fontStyle: "italic" }}>Salon</span>
             <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
               style={{ display: "block", fontSize: "0.18em", fontWeight: 300, letterSpacing: 4, color: "rgba(255,255,255,0.35)", marginTop: 16 }}>
               ✦  PREMIUM BEAUTY EXPERIENCE  ✦
