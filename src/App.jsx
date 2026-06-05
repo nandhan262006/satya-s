@@ -260,7 +260,7 @@ const serviceCategories = [
   },
   {
     title: "Acupuncture & Acupressure",
-    photo: "/accupunchre.png",
+    photo: "/accupunchre.webp",
     items: ["Acupuncture Therapy", "Acupressure Therapy", "Pain Management", "Stress Relief", "Holistic Healing", "Energy Balancing", "Pressure Point Massage", "Muscle Tension Release", "Wellness Treatment"]
   }
 ];
