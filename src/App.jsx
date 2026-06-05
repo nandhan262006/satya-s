@@ -765,9 +765,9 @@ export default function App() {
           "@type": "BeautySalon",
           "name": "Satya's Beauty & Aesthetic Salon",
           "image": "/images/og-image.webp",
-          "url": "https://satyasbeauty.com/",
+          "url": "https://satyasbeauty.in/",
           "telephone": "+91-94946-46975",
-          "email": "info@satyasbeauty.com",
+          "email": "info@satyasbeauty.in",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "4th Cross Rd, Housing Board Colony",
