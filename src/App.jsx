@@ -93,7 +93,7 @@ const Navbar = () => {
   }, []);
   const links = ["Home", "About", "Services", "Portfolio", "Booking", "Contact"];
   return (
-    <nav
+    <nav aria-label="Main navigation"
       style={{
         position: "fixed", top: "1rem", left: "50%", zIndex: 1000,
         width: "calc(100% - 2rem)", maxWidth: 1200,
@@ -110,7 +110,7 @@ const Navbar = () => {
     >
       <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
         <motion.div className="nav-title" whileHover={{ scale: 1.04 }} style={{ cursor: "pointer", display: "flex", alignItems: "center" }}>
-          <img src="/images/WATERMARK.png" alt="Satya's Beauty & Aesthetic Salon" style={{ height: 60, objectFit: "contain", filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.1))" }} />
+          <img src="/images/WATERMARK.webp" alt="Satya's Beauty & Aesthetic Salon" style={{ height: 60, objectFit: "contain", filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.1))" }} />
         </motion.div>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }} className="desktop-nav">
           {links.map((l) => (
@@ -124,7 +124,7 @@ const Navbar = () => {
             Book Now
           </motion.button>
         </div>
-        <button onClick={() => setOpen(!open)} style={{ background: "none", border: "none", cursor: "pointer", color: COLORS.primary, display: "none" }} className="mobile-menu-btn">
+        <button onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"} style={{ background: "none", border: "none", cursor: "pointer", color: COLORS.primary, display: "none" }} className="mobile-menu-btn">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -145,9 +145,9 @@ const Navbar = () => {
 const Hero = () => {
   const ref = useRef(null);
   return (
-    <section id="home" ref={ref} style={{
+    <section id="home" ref={ref} aria-label="Hero" style={{
       minHeight: "100vh", display: "flex", alignItems: "center", position: "relative", overflow: "hidden", paddingTop: 96,
-      backgroundImage: "url(/images/HOME.png)", backgroundSize: "cover", backgroundPosition: "center"
+      backgroundImage: "url(/images/HOME.webp)", backgroundSize: "cover", backgroundPosition: "center"
     }}>
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(59,34,49,0.45), rgba(109,24,72,0.25))" }} />
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "6rem 2rem 4rem", width: "100%", position: "relative", zIndex: 1 }}>
@@ -179,7 +179,7 @@ const Hero = () => {
             </motion.button>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="hero-stats" style={{ display: "flex", gap: "2.5rem", marginTop: "3rem" }}>
-            {[["500+", "Happy Clients"], ["15+", "Expert Artists"], ["16+", "Years Experience"]].map(([num, label]) => (
+            {[["1000+", "Happy Clients"], ["16+", "Years Experience"]].map(([num, label]) => (
               <div key={label}>
                 <div style={{ fontFamily: "'Playfair Display'", fontSize: 32, fontWeight: 700, color: "#fff" }}>{num}</div>
                 <div style={{ fontFamily: "'Outfit'", fontSize: 13, color: "#fff", opacity: 0.85, letterSpacing: 1, fontWeight: 500 }}>{label}</div>
@@ -196,62 +196,62 @@ const Hero = () => {
 const serviceCategories = [
   {
     title: "Nail Art",
-    photo: "/images/nails.png",
+    photo: "/images/nails.webp",
     items: ["Gel Extensions", "Acrylic Nails", "Nail Art Designs", "French Manicure", "Nail Spa"]
   },
   {
     title: "Threading",
-    photo: "/images/THREADING.png",
+    photo: "/images/THREADING.webp",
     items: ["Eyebrow Threading", "Upper Lip Threading", "Chin Threading", "Full Face Threading"]
   },
   {
     title: "Waxing",
-    photo: "/images/waxing.png",
+    photo: "/images/waxing.webp",
     items: ["Honey Wax", "Rica Wax", "Gel Wax", "Roll On Wax", "Brazilian Wax"]
   },
   {
     title: "Pedicure & Manicure",
-    photo: "/images/pedicure.png",
+    photo: "/images/pedicure.webp",
     items: ["Basic Pedicure & Manicure", "Crystal Pedicure & Manicure", "Crystal Ice Cream Pedicure & Manicure", "Aroma Pedicure & Manicure", "Candle Pedicure & Manicure", "Paraffin Pedicure & Manicure"]
   },
   {
     title: "Facials",
-    photo: "/images/facial.png",
+    photo: "/images/facial.webp",
     items: ["Mini Facial", "Tan Clear Facial", "Basic Facial (Fruit & Herbal)", "Metallic Facial (Silver, Gold, Diamond, Pearl, Platinum)", "Acne Facial", "Whitening Facial", "Brightening Facial", "Skin Lightning Facial", "Glass Skin Facial", "Korean Facial", "And 100+ More"]
   },
   {
     title: "Hair Colouring",
-    photo: "/images/haircolor.png",
+    photo: "/images/haircolor.webp",
     items: ["Natural Henna", "Permanent Hair Colour", "Basic Hair Colour", "Hair Highlights"]
   },
   {
     title: "Hair Cuts",
-    photo: "/images/haircut.png",
+    photo: "/images/haircut.webp",
     items: ["Basic Cuts", "Fashion Cuts", "Baby Hair Cuts", "Customised Cuts (Face Framing & Hair Volume)"]
   },
   {
     title: "Head Massage",
-    photo: "/images/headmassage.png",
+    photo: "/images/headmassage.webp",
     items: ["Coconut Oil Massage", "Aroma Oil Massage"]
   },
   {
     title: "Body Massage",
-    photo: "/images/bodymassage.png",
+    photo: "/images/bodymassage.webp",
     items: ["Weight Loss Massage with Steam", "Relaxing Body Massage", "Body Polishing"]
   },
   {
     title: "Skin Treatments",
-    photo: "/images/skintreatment.png",
+    photo: "/images/skintreatment.webp",
     items: ["Pigmentation Treatments", "Skin Whitening", "Acne Treatments"]
   },
   {
     title: "Hair Treatments",
-    photo: "/images/hairtreatment.png",
+    photo: "/images/hairtreatment.webp",
     items: ["Dandruff Treatment", "Hair Fall Treatment", "Hair Regrowth Treatment", "Spa Treatment for Hair Smoothing", "Keratin", "Hair Botox", "Nanoplastia"]
   },
   {
     title: "Aesthetic",
-    photo: "/images/aesthetic.png",
+    photo: "/images/aesthetic.webp",
     items: ["Hydro Facials", "Chemical Peels", "Laser Hair Removal", "Permanent Eyebrows", "Permanent Lipstick", "Permanent Makeup", "Permanent Lashes"]
   }
 ];
@@ -340,7 +340,7 @@ const Services = () => {
           {serviceCategories.map((s, i) => (
             <motion.div key={s.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: i * 0.05 }} viewport={{ once: true }}
               whileHover={{ y: -8, boxShadow: `0 20px 50px rgba(109,24,72,0.2)` }}
-              onClick={() => setSelected(s)}
+              onClick={() => setSelected(s)} role="button" aria-label={`View ${s.title} services`}
               style={{
                 background: "rgba(255,255,255,0.2)", backdropFilter: "blur(18px)", border: "1px solid rgba(255,255,255,0.3)",
                 borderRadius: 28, cursor: "pointer", transition: "box-shadow 0.4s", position: "relative", overflow: "hidden",
@@ -377,11 +377,18 @@ const Services = () => {
 };
 
 // Portfolio
-const portfolioPhotos = Array.from({ length: 10 }, (_, i) => ({
-  id: i,
-  title: `Work ${i + 1}`,
-  photo: "",
-}));
+const portfolioPhotos = [
+  { id: 0, title: "Work 1", photo: "/images/gallery1.webp" },
+  { id: 1, title: "Work 2", photo: "/images/gallery2.webp" },
+  { id: 2, title: "Work 3", photo: "/images/gallery3.webp", bgPosition: "50% 0%" },
+  { id: 3, title: "Work 4", photo: "/images/gallery4.webp" },
+  { id: 4, title: "Work 5", photo: "/images/gallery5.webp" },
+  { id: 5, title: "Work 6", photo: "/images/gallery6.webp" },
+  { id: 6, title: "Work 7", photo: "/images/gallery7.webp", bgPosition: "50% 0%" },
+  { id: 7, title: "Work 8", photo: "/images/galley8.webp", bgPosition: "50% 17%", bgSize: "150%" },
+  { id: 8, title: "Work 9", photo: "/images/gallery9.webp", bgPosition: "50% 0%" },
+  { id: 9, title: "Work 10", photo: "/images/gallery10.webp", bgPosition: "50% 20%" },
+];
 
 const Portfolio = () => (
   <section id="portfolio" style={{ padding: "7rem 2rem" }}>
@@ -393,12 +400,12 @@ const Portfolio = () => (
         </h2>
       </motion.div>
       <div className="portfolio-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1rem" }}>
-        {portfolioPhotos.map((p, i) => (
-          <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.05 }} viewport={{ once: true }}
-            whileHover={{ scale: 1.04, zIndex: 2 }}
+          {portfolioPhotos.map((p, i) => (
+            <motion.div key={p.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.05 }} viewport={{ once: true }}
+              whileHover={{ scale: 1.04, zIndex: 2 }} role="img" aria-label={p.photo ? `${p.title}` : "Placeholder"}
             style={{
               aspectRatio: "1 / 1", borderRadius: 16, overflow: "hidden", cursor: "pointer",
-              background: p.photo ? `url(${p.photo}) center/cover no-repeat` : `linear-gradient(135deg, hsl(${i * 36}, 40%, 75%), hsl(${i * 36 + 30}, 50%, 60%))`,
+              background: p.photo ? `url(${p.photo}) ${p.bgPosition || "center"}/${p.bgSize || "cover"} no-repeat` : `linear-gradient(135deg, hsl(${i * 36}, 40%, 75%), hsl(${i * 36 + 30}, 50%, 60%))`,
               display: "flex", alignItems: "center", justifyContent: "center",
               border: "1px solid rgba(255,255,255,0.2)",
             }}
@@ -611,7 +618,7 @@ const Contact = () => (
                 <Icon size={22} color={COLORS.primary} />
               </div>
               <h4 style={{ fontFamily: "'Outfit'", fontSize: 12, letterSpacing: 2, color: COLORS.accent, fontWeight: 600, marginBottom: 6 }}>{title}</h4>
-              <p style={{ fontFamily: "'Playfair Display'", fontSize: 16, fontWeight: 700, color: COLORS.textDark, marginBottom: 4 }}>{info}</p>
+              <p style={{ fontFamily: "'Playfair Display'", fontSize: 16, fontWeight: 700, color: COLORS.textDark, marginBottom: 4, overflowWrap: "break-word", wordBreak: "break-word" }}>{info}</p>
               <p style={{ fontFamily: "'Outfit'", fontSize: 12, color: COLORS.textDark, opacity: 0.6 }}>{sub}</p>
             </motion.div>
           );
@@ -734,9 +741,10 @@ export default function App() {
           "@context": "https://schema.org",
           "@type": "BeautySalon",
           "name": "Satya's Beauty & Aesthetic Salon",
-          "image": "/images/og-image.jpg",
+          "image": "/images/og-image.webp",
           "url": "https://satyasbeauty.com/",
           "telephone": "+91-94946-46975",
+          "email": "info@satyasbeauty.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "4th Cross Rd, Housing Board Colony",
@@ -745,17 +753,38 @@ export default function App() {
             "postalCode": "524004",
             "addressCountry": "IN"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "14.4576",
+            "longitude": "79.9826"
+          },
           "openingHoursSpecification": [
             { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "20:00" }
           ],
           "priceRange": "₹299 - ₹44,999",
-          "description": "Premium beauty salon in Nellore offering bridal makeup, skin treatments, nail art, spa, and hair styling."
+          "description": "Premium beauty salon in Nellore offering bridal makeup, skin treatments, nail art, spa, and hair styling.",
+          "sameAs": [
+            "https://www.instagram.com/satyasbeauty_makeup_artist",
+            "https://wa.me/919494646975"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Beauty Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bridal Makeup" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nail Art" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facials" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Styling" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skin Treatments" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Waxing" } }
+            ]
+          }
         }
       `}</script>
       <PetalRain />
-      <motion.img src="/images/WATERMARK.png" alt="Satya's Beauty & Aesthetic Salon watermark" style={{ position: "fixed", inset: 0, width: "100%", height: "100%", objectFit: "contain", pointerEvents: "none", zIndex: -1, padding: "4rem", opacity: watermarkOpacity }} />
+      <motion.img src="/images/WATERMARK.webp" alt="Satya's Beauty & Aesthetic Salon watermark" style={{ position: "fixed", inset: 0, width: "100%", height: "100%", objectFit: "contain", pointerEvents: "none", zIndex: -1, padding: "4rem", opacity: watermarkOpacity }} />
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Services />
         <Portfolio />
