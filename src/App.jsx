@@ -785,7 +785,7 @@ export default function App() {
             { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "20:00" }
           ],
           "priceRange": "₹299 - ₹44,999",
-          "description": "Premium beauty salon in Nellore offering bridal makeup, skin treatments, nail art, spa, and hair styling.",
+          "description": "Premium beauty salon in Nellore offering acupuncture, acupressure, bridal makeup, skin treatments, nail art, spa, and hair styling.",
           "sameAs": [
             "https://www.instagram.com/satyasbeauty_makeup_artist",
             "https://wa.me/919494646975"
@@ -799,6 +799,8 @@ export default function App() {
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facials" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Styling" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skin Treatments" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Acupuncture" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Acupressure" } },
               { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Waxing" } }
             ]
           }
