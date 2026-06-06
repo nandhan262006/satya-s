@@ -336,7 +336,7 @@ const Services = () => {
   return (
     <section id="services" style={{ padding: "7rem 2rem" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: "4rem" }}>
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="section-header" style={{ textAlign: "center", marginBottom: "4rem" }}>
           <span style={{ fontFamily: "'Outfit'", fontSize: 12, color: COLORS.accent, letterSpacing: 3, fontWeight: 600 }}>WHAT WE OFFER</span>
           <h2 style={{ fontFamily: "'Playfair Display'", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: COLORS.textDark, margin: "0.8rem 0 1rem" }}>
             Our <span style={{ color: COLORS.primary, fontStyle: "italic" }}>Signature</span> Services
@@ -402,7 +402,7 @@ const portfolioPhotos = [
 const Portfolio = () => (
   <section id="portfolio" style={{ padding: "7rem 2rem" }}>
     <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: "3rem" }}>
+      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="section-header" style={{ textAlign: "center", marginBottom: "3rem" }}>
         <span style={{ fontFamily: "'Outfit'", fontSize: 12, color: COLORS.accent, letterSpacing: 3, fontWeight: 600 }}>OUR WORK</span>
         <h2 style={{ fontFamily: "'Playfair Display'", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: COLORS.textDark, margin: "0.8rem 0" }}>
           Our <span style={{ color: COLORS.primary, fontStyle: "italic" }}>Gallery</span>
@@ -466,7 +466,7 @@ const Booking = () => {
     <section id="booking" style={{ padding: "7rem 2rem", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, rgba(109,24,72,0.05), rgba(183,122,165,0.08))` }} />
       <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 1 }}>
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="section-header" style={{ textAlign: "center", marginBottom: "3rem" }}>
           <span style={{ fontFamily: "'Outfit'", fontSize: 12, color: COLORS.accent, letterSpacing: 3, fontWeight: 600 }}>RESERVE YOUR SLOT</span>
           <h2 style={{ fontFamily: "'Playfair Display'", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: COLORS.textDark, margin: "0.8rem 0 1rem" }}>
             Book an <span style={{ color: COLORS.primary, fontStyle: "italic" }}>Appointment</span>
@@ -606,7 +606,7 @@ const Booking = () => {
 const Contact = () => (
   <section id="contact" style={{ padding: "5rem 2rem" }}>
     <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: "3rem" }}>
+      <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="section-header" style={{ textAlign: "center", marginBottom: "3rem" }}>
         <span style={{ fontFamily: "'Outfit'", fontSize: 12, color: COLORS.accent, letterSpacing: 3, fontWeight: 600 }}>REACH US</span>
         <h2 style={{ fontFamily: "'Playfair Display'", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: COLORS.textDark, margin: "0.8rem 0" }}>
           Visit Our <span style={{ color: COLORS.primary, fontStyle: "italic" }}>Salon</span>
@@ -743,6 +743,7 @@ export default function App() {
           .hero-stats { gap: 1.5rem !important; }
           #home { background-position: 65% center !important; }
           .nav-title img { height: 48px !important; }
+          .section-header { text-align: left !important; }
         }
         @media (max-width: 480px) {
           .hero-stats { gap: 1rem !important; flex-wrap: wrap !important; justify-content: center !important; }
@@ -759,6 +760,7 @@ export default function App() {
           #home { background-position: 70% center !important; }
           .nav-title img { height: 40px !important; }
           .nav-title img { height: 48px !important; }
+          .section-header { text-align: left !important; }
           section { padding: 3rem 1rem !important; }
           footer { padding: 3rem 1rem 1.5rem !important; }
           #home { background-position: 70% center !important; }
