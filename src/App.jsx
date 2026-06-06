@@ -155,18 +155,14 @@ const Hero = () => {
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
             style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.8rem, 5vw, 4.2rem)", fontWeight: 700, color: "#fff", lineHeight: 1.15, marginBottom: "0.5rem" }}>
             <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}
-              style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.22em", fontWeight: 300, letterSpacing: 6, color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>
+              style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.22em", fontWeight: 400, letterSpacing: 6, color: "rgba(255,255,255,0.9)", marginBottom: 12 }}>
               <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3))" }} />
               WELCOME TO
               <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, rgba(255,255,255,0.3), transparent)" }} />
             </motion.span>
-            <span style={{ background: "linear-gradient(135deg, #fff, #f5d8e8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontSize: "1em", display: "block", lineHeight: 1.1 }}>Satya's</span>
-            <span style={{ fontSize: "0.55em", fontWeight: 300, letterSpacing: 10, color: "rgba(245,216,232,0.9)", display: "block", marginTop: 6 }}>Beauty & Aesthetic</span>
-            <span style={{ fontSize: "0.35em", fontWeight: 400, letterSpacing: 12, color: "rgba(232,196,216,0.6)", display: "block", marginTop: 2, fontStyle: "italic" }}>Salon</span>
-            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
-              style={{ display: "block", fontSize: "0.18em", fontWeight: 300, letterSpacing: 4, color: "rgba(255,255,255,0.35)", marginTop: 16 }}>
-              ✦  PREMIUM BEAUTY EXPERIENCE  ✦
-            </motion.span>
+            <span style={{ background: "linear-gradient(135deg, #fff, #fce4ec)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontSize: "1em", display: "block", lineHeight: 1.1, marginBottom: 8 }}>Satya's</span>
+            <span style={{ fontSize: "0.55em", fontWeight: 400, letterSpacing: 8, color: "#fff", display: "block", marginTop: 6 }}>Beauty & Aesthetic</span>
+            <span style={{ fontSize: "0.35em", fontWeight: 500, letterSpacing: 10, color: "rgba(255,255,255,0.9)", display: "block", marginTop: 2, fontStyle: "italic" }}>Salon</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }}
             style={{ fontFamily: "'Outfit'", fontSize: 16, color: "#fff", opacity: 0.85, lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: 440 }}>
