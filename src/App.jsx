@@ -150,8 +150,8 @@ const Hero = () => {
       backgroundImage: "url(/images/HOME.webp)", backgroundSize: "cover", backgroundPosition: "center"
     }}>
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(59,34,49,0.45), rgba(109,24,72,0.25))" }} />
-      <div className="hero-content" style={{ maxWidth: 1200, margin: "0 auto", padding: "6rem 2rem 4rem", width: "100%", position: "relative", zIndex: 1 }}>
-        <motion.div initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, ease: "easeOut" }} className="hero-text" style={{ maxWidth: 600 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "6rem 2rem 4rem", width: "100%", position: "relative", zIndex: 1 }}>
+        <motion.div initial={{ opacity: 0, x: -60 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, ease: "easeOut" }} style={{ maxWidth: 600 }}>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
             style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.8rem, 5vw, 4.2rem)", fontWeight: 700, color: "#fff", lineHeight: 1.15, marginBottom: "0.5rem" }}>
             <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}
@@ -741,11 +741,9 @@ export default function App() {
           .portfolio-grid { grid-template-columns: repeat(3, 1fr) !important; }
           section { padding: 4rem 1.25rem !important; }
           .hero-stats { gap: 1.5rem !important; }
-          #home { background-position: right center !important; }
+          #home { background-position: 65% center !important; }
           .nav-title img { height: 48px !important; }
           .section-header { text-align: left !important; }
-          .hero-content { padding: 6rem 1.25rem 4rem !important; }
-          .hero-text { max-width: 50% !important; }
         }
         @media (max-width: 480px) {
           .hero-stats { gap: 1rem !important; flex-wrap: wrap !important; justify-content: center !important; }
@@ -753,16 +751,19 @@ export default function App() {
           .hero-btns > * { width: 100% !important; justify-content: center !important; }
           .service-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .portfolio-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
           .booking-grid { grid-template-columns: 1fr !important; }
           .footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
           .about-features { grid-template-columns: 1fr !important; }
           section { padding: 3rem 1rem !important; }
           footer { padding: 3rem 1rem 1.5rem !important; }
-          #home { background-position: right center !important; }
+          #home { background-position: 70% center !important; }
           .nav-title img { height: 40px !important; }
+          .nav-title img { height: 48px !important; }
           .section-header { text-align: left !important; }
-          .hero-content { padding: 5rem 1rem 3rem !important; }
-          .hero-text { max-width: 65% !important; }
+          section { padding: 3rem 1rem !important; }
+          footer { padding: 3rem 1rem 1.5rem !important; }
+          #home { background-position: 70% center !important; }
         }
       `}</style>
       <script type="application/ld+json">{`
