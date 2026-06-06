@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "presitemap": "node scripts/generate-sitemap.js",
+    "build": "npm run presitemap && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
